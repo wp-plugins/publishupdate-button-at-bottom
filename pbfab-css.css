@@ -1,0 +1,29 @@
+div#publish-floater-wrapper {
+	position: fixed;
+	bottom: 0px;
+	left:160px;
+	z-index:99999;
+	background-color: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	min-height: 40px;
+}
+div#publish-floater-wrapper input {
+		position: fixed;
+		right: 140px;
+}
+#publish-floater-wrapper a.byebye {
+	color: #fff;
+	position: fixed;
+	right: 20px;
+}
+#publish-floater-wrapper a#post-preview {
+	position: fixed;
+	left: 180px;
+}
+#publish-floater-wrapper-info {
+	position: fixed;
+	color: #fff;
+	left: 400px;
+	margin-top: -10px;
+}
