@@ -1,29 +1,57 @@
 div#publish-floater-wrapper {
 	position: fixed;
 	bottom: 0px;
-	left:160px;
 	z-index:99999;
 	background-color: rgba(0, 0, 0, 0.8);
 	background: rgba(0, 0, 0, 0.8);
 	padding: 20px;
-	min-height: 40px;
+	height: auto;
+	margin-left: 50%;
+	left: -250px;
+	width: 500px;
+	border-top: 5px solid #999;
 }
-div#publish-floater-wrapper input {
-		position: fixed;
-		right: 140px;
+div#publish-floater-wrapper input#publish-floater {
+	position: relative;
+	float:right;
 }
 #publish-floater-wrapper a.byebye {
 	color: #fff;
-	position: fixed;
-	right: 20px;
+	position: relative;
+	float: right;
+	margin-right: 10px;
 }
 #publish-floater-wrapper a#post-preview {
-	position: fixed;
-	left: 180px;
+	position: relative;
+	float:left;
+}
+div#publish-floater-wrapper input#save-post {
+	position: relative;
+	float:left;
+	margin-left: 10px;
 }
 #publish-floater-wrapper-info {
 	position: fixed;
-	color: #fff;
-	left: 400px;
-	margin-top: -10px;
+	color: #000;
+	margin-left: 50%;
+	left: -150px;
+	z-index: 99999;
+	width: 300px;
+	height: auto;
+	background-color: #fff;
+	bottom: 90px;
+	padding: 20px;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.51);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.51);
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.51);
+}
+#tri-down {
+	position: relative;
+	bottom: -54px;
+	margin-left: 50%;
+	left: -22px;
+}
+.got-it {
+	color: #00A0D2;
+	float: right;
 }

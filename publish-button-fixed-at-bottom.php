@@ -30,16 +30,21 @@ function force_publish_update_button_to_bottom() {
 	echo "<script type='text/javascript'>\n";
 	echo "
 	jQuery(function($) { 
-		var thewidth = window.innerWidth;
-		var widthMinusAdminMenu = thewidth - 160;
-		$('#publishing-action').append('<div id=\"publish-floater-wrapper\" style=\"width:' + widthMinusAdminMenu +'px;\"><input name=\"publish\" type=\"submit\" class=\"button button-primary button-large\" id=\"publish-floater\" accesskey=\"p\" value=\"Publish or Update\"></div>');
+		$('#publishing-action').append('<div id=\"publish-floater-wrapper\"><input name=\"publish\" type=\"submit\" class=\"button button-primary button-large\" id=\"publish-floater\" accesskey=\"p\" value=\"Publish or Update\"></div>');
 		$('a.submitdelete').clone().appendTo('#publish-floater-wrapper');
 		$('#publish-floater-wrapper a.submitdelete').addClass('button button-primary button-large');
 		$('#publish-floater-wrapper a.submitdelete:last').remove();
 		$('#publish-floater-wrapper a.submitdelete').addClass('byebye');
 		$('#publish-floater-wrapper a.byebye').removeClass('submitdelete');
 		$('a#post-preview').clone().appendTo('#publish-floater-wrapper');
-		$('#publish-floater-wrapper').append('<div id=\"publish-floater-wrapper-info\"><p>You can hide this box by pressing the \'down\' key on your keyboard. If you need to see it again, press the \'up\' key on your keyboard.</p></div>');
+		$('input#save-post').clone().appendTo('#publish-floater-wrapper');
+		var dcm = (document.cookie.match(/^(?:.*;)?never-show-info-bar-again=([^;]+)(?:.*)?$/)||[,null])[1];
+		if(dcm == 1){
+			var cookieornot = \"none\";
+		}else{
+			var cookieornot = \"block\";
+		}
+		$('body').append('<div id=\"publish-floater-wrapper-info\" style=\"display:' + cookieornot +';\"><h3>Publish buttons at bottom</h3><p>You can hide this bar by pressing the \'down\' key on your keyboard. If you need to see it again, press the \'up\' key on your keyboard.</p><p><a  class=\"got-it\" href=\"\">OK, got it.</a></p><div id=\"tri-down\"><img src=\"" . plugin_dir_url( __FILE__ )  . "/arrowdown.png\" /></div></div>');
 		$(document).keydown(function(e) {
 			switch(e.which) {
 			case 38: // up
@@ -51,6 +56,11 @@ function force_publish_update_button_to_bottom() {
 			default: return;
 		}
 		e.preventDefault();
+	});
+	$('a.got-it').click(function() {
+		$('#publish-floater-wrapper-info').fadeOut();
+		document.cookie=\"never-show-info-bar-again=1; expires=Wed, 1 Jan 2020 12:00:00 UTC\";
+		return false;
 	});
 });
 ";
