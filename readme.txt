@@ -7,8 +7,8 @@ Author URI:
 Author: Kev Leitch
 Requires at least: 3.8.5
 Tested up to: 4.2.4
-Stable tag: 1.0.0
-Version: 1.0.0
+Stable tag: 2.0.0
+Version: 2.0.0
 
 This plugin was developed for Post screens with lots of custom fields which make the editing screen long.
 
