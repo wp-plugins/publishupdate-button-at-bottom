@@ -7,8 +7,8 @@ Author URI:
 Author: Kev Leitch
 Requires at least: 3.8.5
 Tested up to: 4.2.4
-Stable tag: 2.0.0
-Version: 2.0.0
+Stable tag: 2.0.1
+Version: 2.0.1
 
 This plugin was developed for Post screens with lots of custom fields which make the editing screen long.
 
@@ -41,3 +41,7 @@ I don't have access to a Mac. This version is also not responsive. This will be 
 * Placed explanatory text in speech bubble
 * Made speech bubble go away by setting a cookie when 'got it' link is clicked. Cookie value is fetched upon page load and if isset, hides speech bubble
 * Various CSS work
+
+=2.0.1 =
+* Added broken image
+* Fixed relevant styles

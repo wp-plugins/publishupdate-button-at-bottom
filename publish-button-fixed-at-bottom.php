@@ -3,7 +3,7 @@
  * Plugin Name: Publish/Update Button At Bottom
  * Plugin URI:
  * Description: This plugin pushes a copy of the Publish/Update button into an on screen footer. This is really for Posts that have a lot of Custom Fields which makes the post editing screen very long.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: Kev Leitch kevleitch@gmail.com
  * Author URI: 
  * License: GPLv2 or later
