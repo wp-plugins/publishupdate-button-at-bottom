@@ -6,11 +6,11 @@ Tags: advanced custom fields, custom fields, admin, admin area, publish button, 
 Author URI:
 Author: Kev Leitch
 Requires at least: 3.8.5
-Tested up to: 4.0.0
-Stable tag: 1.0.0
-Version: 1.0.0
+Tested up to: 4.2.4
+Stable tag: 2.0.1
+Version: 2.0.1
 
-This plugin was developed for a client who utilises a lot of custom fields which was making the Post screen very long. He wanted a publish/update button at the bottom of the screen.
+This plugin was developed for Post screens with lots of custom fields which make the editing screen long.
 
 == Description ==
 This plugin adds a sticky footer which contains a Publish/Update button, a Move to Trash button and a Preview Changes button. It can be hidden or shown using the keyboard if desired.
@@ -31,5 +31,17 @@ I don't have access to a Mac. This version is also not responsive. This will be 
 1. This is how the plugin looks in the Post add/edit screen
 
 == Changelog ==
+
 = 1.0.0 =
 * Publish/Update Button At Bottom.
+
+= 2.0.0 =
+* Limited width of bar
+* Added Save Draft button
+* Placed explanatory text in speech bubble
+* Made speech bubble go away by setting a cookie when 'got it' link is clicked. Cookie value is fetched upon page load and if isset, hides speech bubble
+* Various CSS work
+
+=2.0.1 =
+* Added broken image
+* Fixed relevant styles
