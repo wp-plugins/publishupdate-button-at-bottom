@@ -42,6 +42,6 @@ I don't have access to a Mac. This version is also not responsive. This will be 
 * Made speech bubble go away by setting a cookie when 'got it' link is clicked. Cookie value is fetched upon page load and if isset, hides speech bubble
 * Various CSS work
 
-=2.0.1 =
+= 2.0.1 =
 * Added broken image
 * Fixed relevant styles
