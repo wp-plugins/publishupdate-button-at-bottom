@@ -3,7 +3,7 @@
  * Plugin Name: Publish/Update Button At Bottom
  * Plugin URI:
  * Description: This plugin pushes a copy of the Publish/Update button into an on screen footer. This is really for Posts that have a lot of Custom Fields which makes the post editing screen very long.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: Kev Leitch kevleitch@gmail.com
  * Author URI: 
  * License: GPLv2 or later
@@ -30,7 +30,9 @@ function force_publish_update_button_to_bottom() {
 	echo "<script type='text/javascript'>\n";
 	echo "
 	jQuery(function($) { 
-		$('#publishing-action').append('<div id=\"publish-floater-wrapper\"><input name=\"publish\" type=\"submit\" class=\"button button-primary button-large\" id=\"publish-floater\" accesskey=\"p\" value=\"Publish or Update\"></div>');
+		if($('body').hasClass('post-type-post') || $('body').hasClass('post-type-page')) {
+			$('#publishing-action').append('<div id=\"publish-floater-wrapper\"><input name=\"publish\" type=\"submit\" class=\"button button-primary button-large\" id=\"publish-floater\" accesskey=\"p\" value=\"Publish or Update\"></div>');
+		}
 		$('a.submitdelete').clone().appendTo('#publish-floater-wrapper');
 		$('#publish-floater-wrapper a.submitdelete').addClass('button button-primary button-large');
 		$('#publish-floater-wrapper a.submitdelete:last').remove();
